@@ -15,13 +15,13 @@ public class TransactionController {
     @Autowired
     private TransactionService service;
 
-    // ✅ ADMIN ONLY (or ADMIN + ANALYST)
+   
     @PostMapping("/add")
     public Object add(@RequestBody Transaction t,
                       @RequestParam Role role) {
 
         if (role != Role.ADMIN) {
-            return "Access Denied ❌ Only ADMIN can add transactions";
+            return "Access Denied  Only ADMIN can add transactions";
         }
 
         return service.add(t);
@@ -36,13 +36,13 @@ public class TransactionController {
     public String delete(@PathVariable String id,
                          @RequestParam Role role) {
 
-        System.out.println("DELETE API HIT ✅ ID: " + id);
+        System.out.println("DELETE API  ID: " + id);
 
         if (role != Role.ADMIN) {
-            return "Access Denied ❌";
+            return "Access Denied ";
         }
 
         service.delete(id);
-        return "Deleted ✅";
+        return "Deleted ";
     }
 }
