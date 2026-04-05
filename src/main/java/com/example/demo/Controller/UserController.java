@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     private UserService service;
 
-    // Add user
+    
     @PostMapping("/add")
     public Object addUser(@RequestBody User user,
                           @RequestParam String role) {
@@ -28,13 +28,13 @@ public class UserController {
         return service.save(user);
     }
 
-    // Get all users
+  
     @GetMapping("/all")
     public List<User> getAll() {
         return service.getAll();
     }
 
-    // Edit user
+ 
     @PutMapping("/edit/{id}")
     public Object editUser(@PathVariable String id,
                            @RequestBody User updatedUser,
@@ -57,7 +57,7 @@ public class UserController {
         return service.save(user);
     }
 
-    // Delete user
+    
     @DeleteMapping("/delete/{id}")
     public Object deleteUser(@PathVariable String id,
                              @RequestParam String role) {
