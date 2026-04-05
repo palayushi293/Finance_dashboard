@@ -17,7 +17,7 @@ public class User {
     private String email;
 
     @Field("role")
-    private String role; // using String
+    private String role; 
 
     @Field("active")
     private boolean active = true;
