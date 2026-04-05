@@ -15,17 +15,17 @@ public  class Transaction {
     private String id;
 
     private double amount;
-    private Type type;   // ✅ your enum
+    private Type type;  
 
     private String category;
     private LocalDate date;
     private String description;
 	public Type getType() {
-		// TODO Auto-generated method stub
+	
 		return type;
 	}
 	public double getAmount() {
-		// TODO Auto-generated method stub
+		
 		return amount;
 	}
 	public void setId(String id2) {
