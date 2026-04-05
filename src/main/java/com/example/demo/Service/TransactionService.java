@@ -13,7 +13,7 @@ public class TransactionService {
     @Autowired
     private TransactionRepository repo;
 
-    // ✅ ADD THIS METHOD
+   
     public Transaction add(Transaction t) {
         return repo.save(t);
     }
